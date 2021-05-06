@@ -9,15 +9,16 @@ class PaginaInicial extends StatelessWidget {
       children: [
         SplashScreen(
           seconds: 3,
-          gradientBackground: LinearGradient(begin: Alignment.topRight, end: Alignment.bottomLeft, colors: [Colors.green[300], Colors.green[600]]),
+          backgroundColor: Colors.purple[700],
           navigateAfterSeconds: PaginaLogin(),
-          loaderColor: Colors.transparent,
+          loaderColor: Colors.white,
         ),
         Center(
           child: Image.network(
-            'https://borainvestir.com/wp-content/uploads/2018/10/gif-cartao-nu.gif',
-            width: 250.0,
-            height: 250.0,
+            'https://cdn.picpng.com/bank/nubank-soon-bank-brazilian-45820.png',
+            width: 100.0,
+            height: 100.0,
+            color: Colors.white,
           ),
         )
       ],
