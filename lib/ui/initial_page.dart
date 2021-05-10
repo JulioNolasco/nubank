@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/telas/pagina_login.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'login_page.dart';
 
-class PaginaInicial extends StatelessWidget {
+class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -10,7 +10,7 @@ class PaginaInicial extends StatelessWidget {
         SplashScreen(
           seconds: 3,
           backgroundColor: Colors.purple[700],
-          navigateAfterSeconds: PaginaLogin(),
+          navigateAfterSeconds: LoginPage(),
           loaderColor: Colors.white,
         ),
         Center(

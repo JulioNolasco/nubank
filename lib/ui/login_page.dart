@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:nubank/rotas/app_rotas.dart';
 
-class PaginaLogin extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final cpfController = TextEditingController();
+    final senhaController = TextEditingController();
+    var _senha;
+    var _cpf;
+
     return Scaffold(
       backgroundColor: Colors.purple[700],
       body: SingleChildScrollView(
@@ -29,6 +32,7 @@ class PaginaLogin extends StatelessWidget {
                     height: 20.0,
                   ),
                   TextFormField(
+                    controller: cpfController,
                     keyboardType: TextInputType.number,
                     autofocus: false,
                     decoration: InputDecoration(
@@ -40,6 +44,7 @@ class PaginaLogin extends StatelessWidget {
                     height: 16.0,
                   ),
                   TextFormField(
+                    controller: senhaController,
                     autofocus: false,
                     obscureText: true,
                     decoration: InputDecoration(
@@ -56,14 +61,18 @@ class PaginaLogin extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         side: BorderSide(color: Colors.purple),
                         shadowColor: Colors.purple,
-                        minimumSize: Size(20, 65),
+                        minimumSize: Size(20, 55),
                         primary: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
                       onPressed: () {
-                        Get.toNamed(Rotas.HOME);
+                        //Get.toNamed(Rotas.HOME);
+                        _cpf = cpfController.text;
+                        _senha = senhaController.text;
+                        print("$_cpf\n");
+                        print("$_senha\n");
                       },
                       child: Text(
                         "CONTINUAR",
